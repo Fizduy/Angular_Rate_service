@@ -27,8 +27,8 @@ export class RateFromXMLService implements rateService {
     parser.parseString(data, (err, result) => {
       this.xml = result;
     });
-      const valute = this.xml.VALCURS.VALUTE.filter(data => data.CHARCODE == code );
-      console.log(valute);
+    const valute = this.xml.VALCURS.VALUTE.filter(data => data.CHARCODE == code );
+
     return {
       BaseCode: valute[0].CHARCODE,
       BaseName: valute[0].NAME,
