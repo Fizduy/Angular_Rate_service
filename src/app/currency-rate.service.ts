@@ -16,13 +16,14 @@ import { RateFromJsonService } from './parse-service/rate-from-json.service';
 import { RateFromXMLService } from './parse-service/rate-from-xml.service';
 
 export interface Rate {
-  BaseCode: "EUR" | "USD";
-  BaseName: string;
-  RateValue: number;
+  BaseCode: "EUR" | "USD",
+  BaseName: string,
+  RateValue: number,
 }
 
 export interface rateService {
   readonly responseType: {responseType: any};
+  
   fillData(data: any, code: Rate['BaseCode']): Rate;
 }
 

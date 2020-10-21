@@ -4,9 +4,9 @@ import { rateService, Rate } from '../currency-rate.service';
 export interface dailyJson{
   Valute: {
     EUR: {
-      CharCode: Rate['BaseCode'];
-      Name: string;
-      Value: number;
+      CharCode: Rate['BaseCode'],
+      Name: string,
+      Value: number,
     }
   }
 }

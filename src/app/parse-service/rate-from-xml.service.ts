@@ -13,12 +13,12 @@ export class RateFromXMLService implements rateService {
   xml: {
     VALCURS: {
       VALUTE: {
-        CHARCODE: Rate['BaseCode'];
-        NAME: string;
-        VALUE: number;
+        CHARCODE: Rate['BaseCode'],
+        NAME: string,
+        VALUE: number,
       }[]
     }
-  }
+  };
 
   constructor() { }
 

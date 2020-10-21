@@ -1,4 +1,10 @@
-# Exchange
+# Exchange Rate Service
+
+Сервис для загрузки курса валют
+
+Список источников пополняется через sorceList в конструкторе класса CurrencyRateService (с привязкой одного из сервиса для парсинга)
+Для парсинга новых стркутур необходимо создать сервис с интерфейсом rateService и привязать его к sorceList
+Порядок источников в sorceList определяет порядок переключения
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
 
