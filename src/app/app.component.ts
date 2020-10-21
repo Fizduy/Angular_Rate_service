@@ -11,6 +11,7 @@ import { CurrencyRateService, Rate } from './currency-rate.service';
 export class AppComponent {
   readonly valuteCode: Rate['BaseCode'] = "EUR";
   rateValue: number;
+  dateTime: Date;
 
   private counter = interval(10000);
 
@@ -22,6 +23,7 @@ export class AppComponent {
   }
 
   private getRate(){
+    this.dateTime = new Date();
     this.rateService.getRate(this.valuteCode).subscribe( (data: Rate) => this.rateValue = data.RateValue);
   }
 }
